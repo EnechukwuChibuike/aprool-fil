@@ -107,7 +107,15 @@ document.addEventListener("DOMContentLoaded", function () {
   const backgroundMusic = new Audio("./gameshow.wav");
   backgroundMusic.loop = true;
   backgroundMusic.volume = 0.3;
-  backgroundMusic.play();
+  document.body.addEventListener(
+    "click",
+    function () {
+      backgroundMusic
+        .play()
+        .catch((error) => console.error("Audio play failed:", error));
+    },
+    { once: true }
+  ); // Ensures it runs only on the first click
 
   function loadNewQuestion() {
     loading();
