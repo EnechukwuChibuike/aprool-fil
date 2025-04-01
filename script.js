@@ -104,7 +104,7 @@ document.addEventListener("DOMContentLoaded", function () {
   const questionElement = document.getElementById("question");
   const optionsContainer = document.querySelector(".options");
   const answerSound = new Audio("./correctanswer.wav");
-  const backgroundMusic = new Audio("./backgroundsong.mp3");
+  const backgroundMusic = new Audio("./gameshow.wav");
   backgroundMusic.loop = true;
   backgroundMusic.volume = 0.3;
   backgroundMusic.play();
